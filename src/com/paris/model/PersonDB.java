@@ -15,7 +15,7 @@ public class PersonDB {
     }
 
 
-    public long insert(Person person) {
+    public void insert(Person person) {
         long dbId = 0;
         String SQL = "INSERT INTO person(firstName,lastName,nationalCode,age) " + "VALUES(?,?,?,?)";
         try {
@@ -41,6 +41,5 @@ public class PersonDB {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }
-        return dbId;
     }
 }
