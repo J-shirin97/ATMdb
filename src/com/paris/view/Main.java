@@ -3,13 +3,42 @@ package com.paris.view;
 import com.paris.controller.AccountController;
 import com.paris.controller.PersonController;
 
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-/*
-        PersonController personController = new PersonController();
-        personController.save("0024562900", "Shirin", "Jalilvand", 24);
-        personController.save("0014371715", "Milad", "Tehrani", 300);
-*/
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("welcome to ATM");
+        System.out.println("login OR signup");
+        String str = scanner.nextLine().toLowerCase(Locale.ROOT);
+
+        if (str.equals("signup")){
+            System.out.println("----------------------");
+            System.out.println("Enter National Code: ");
+            String nationalCode = scanner.nextLine();
+            System.out.println("Enter firstname :  ");
+            String firstname = scanner.nextLine();
+            System.out.println("Enter lastname :  ");
+            String lastname = scanner.nextLine();
+            System.out.println("Enter age :  ");
+            Integer age = scanner.nextInt();
+            PersonController personController = new PersonController();
+            personController.save(nationalCode,firstname,lastname,age);
+        }else {
+            System.out.println("Enter your AccountNumber :  ");
+            String accountNumber = scanner.nextLine();
+            System.out.println("Enter your password :   ");
+            String password = scanner.nextLine();
+        AccountController accountController = new AccountController();
+        accountController.save();
+        }
+
+
+
+
+
+
 
 
     }
