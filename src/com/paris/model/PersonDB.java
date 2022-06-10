@@ -1,7 +1,6 @@
 package com.paris.model;
 
 import com.paris.common.JdbcConnection;
-import com.paris.entity.Account;
 import com.paris.entity.Person;
 
 import java.sql.*;

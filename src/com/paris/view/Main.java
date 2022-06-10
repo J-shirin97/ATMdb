@@ -2,12 +2,15 @@ package com.paris.view;
 
 import com.paris.controller.AccountController;
 import com.paris.controller.PersonController;
+import com.paris.entity.Person;
 
+import javax.xml.transform.Result;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("welcome to ATM");
         System.out.println("login OR signup");
@@ -30,16 +33,13 @@ public class Main {
             String accountNumber = scanner.nextLine();
             System.out.println("Enter your password :   ");
             String password = scanner.nextLine();
-        AccountController accountController = new AccountController();
-        //accountController.save();
+            AccountController accountController = new AccountController();
+            //accountController.save();
         }
+    }*/
 
-
-
-
-
-
-
-
+    public static void main(String[] args) throws Exception{
+        PersonController personController = new PersonController();
+        personController.all();
     }
 }

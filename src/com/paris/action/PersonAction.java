@@ -3,7 +3,9 @@ package com.paris.action;
 import com.paris.entity.Person;
 import com.paris.model.PersonDB;
 
-public class Action {
+import java.util.List;
+
+public class PersonAction {
     public void save(Person person){
         PersonDB personDB = new PersonDB();
         personDB.insert(person);
@@ -12,6 +14,13 @@ public class Action {
         PersonDB personDB = new PersonDB();
         personDB.delete(id);
     }
+
+    public List<Person> show(){
+        PersonDB personDB = new PersonDB();
+        List<Person> personList = personDB.selectAll();
+        return personList;
+    }
+
 
 
 
