@@ -24,11 +24,8 @@ public class PersonController {
 
     public void delete(long id) {
         try {
-            Person person = null;
-            if (id == person.getId()) {
-                PersonAction personAction = new PersonAction();
-                personAction.remove(id);
-            }
+            PersonAction personAction = new PersonAction();
+            personAction.remove(id);
         } catch (Exception exception) {
             System.out.println(exception.getMessage());
         }

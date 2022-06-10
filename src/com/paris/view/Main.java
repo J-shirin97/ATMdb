@@ -1,5 +1,6 @@
 package com.paris.view;
 
+import com.paris.action.WithdrawAction;
 import com.paris.controller.AccountController;
 import com.paris.controller.PersonController;
 import com.paris.entity.Person;
@@ -38,8 +39,14 @@ public class Main {
         }
     }*/
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
+        //Select
         PersonController personController = new PersonController();
         personController.all();
+        //Remove
+        /*Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter id: ");
+        int id = scanner.nextInt();
+        personController.delete(id);*/
     }
 }
