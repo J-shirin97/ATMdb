@@ -31,7 +31,7 @@ public class Main {
             System.out.println("Enter your password :   ");
             String password = scanner.nextLine();
         AccountController accountController = new AccountController();
-        accountController.save();
+        //accountController.save();
         }
 
 

@@ -1,8 +1,6 @@
 package com.paris.controller;
 
 import com.paris.entity.Account;
-import com.paris.entity.AccountType;
-import com.paris.entity.Person;
 import com.paris.model.AccountDB;
 
 
@@ -12,7 +10,7 @@ public class AccountController {
         try {
             Account account = null;
             if (accountNumber.length() != 0) {
-                account = new Account().setAccountnumber(accountNumber).setPassword(password).setBalance(balance);
+                account = new Account().setAccountNumber(accountNumber).setPassword(password).setBalance(balance);
             }
             AccountDB accountDB = new AccountDB();
             accountDB.insert(account);

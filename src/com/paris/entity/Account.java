@@ -1,12 +1,16 @@
 package com.paris.entity;
 
+import java.util.List;
+
 public class Account {
     private Long id;
-    private String accountnumber;
+    private String accountNumber;
     private String password;
     private Double balance;
     private Person person;
     private AccountType accountType;
+
+    private List<Transaction> transactions;
 
     public Long getId() {
         return id;
@@ -17,12 +21,12 @@ public class Account {
         return this;
     }
 
-    public String getAccountnumber() {
-        return accountnumber;
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public Account setAccountnumber(String accountnumber) {
-        this.accountnumber = accountnumber;
+    public Account setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
         return this;
     }
 
@@ -59,6 +63,15 @@ public class Account {
 
     public Account setAccountType(AccountType accountType) {
         this.accountType = accountType;
+        return this;
+    }
+
+    public List<Transaction> getTransactions() {
+        return transactions;
+    }
+
+    public Account setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
         return this;
     }
 }

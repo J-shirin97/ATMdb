@@ -108,3 +108,4 @@ values ('Failed', 2);
 select *
 from transactionStatus;
 
+ALTER TABLE Account add column transactionId integer not null references transaction(id);

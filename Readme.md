@@ -4,6 +4,8 @@ ATM with database
   - Attribute and Getter and Setter
 - Connection: Singleton Design Pattern
 - EntityDB: PersonDB, AccountDB,... (CRUD)
+- Action
+- Controller
 - Main (Hardcode)
 
 

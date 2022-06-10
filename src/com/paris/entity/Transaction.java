@@ -2,7 +2,8 @@ package com.paris.entity;
 
 import java.sql.Timestamp;
 
-public class Transaction {
+public sealed class Transaction permits Deposit, Withdraw {
+
     private Long id;
     private Double amount;
     private Timestamp date;

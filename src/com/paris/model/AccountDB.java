@@ -28,7 +28,7 @@ public class AccountDB {
         try {
             PreparedStatement prepareStatement = connection.prepareStatement(SQL,
                     Statement.RETURN_GENERATED_KEYS);
-            prepareStatement.setString(1, account.getAccountnumber());
+            prepareStatement.setString(1, account.getAccountNumber());
             prepareStatement.setString(2, account.getPassword());
             prepareStatement.setDouble(3, account.getBalance());
             prepareStatement.setDouble(4, person.getId());
@@ -59,7 +59,7 @@ public class AccountDB {
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                account.setAccountnumber(accountNumber);
+                account.setAccountNumber(accountNumber);
 
             }
 
